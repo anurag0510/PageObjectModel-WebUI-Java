@@ -35,3 +35,7 @@ hs_err_pid*
 
 # TestNg additional files
 /test-output/
+
+
+# Allure Results
+/allure-results/
