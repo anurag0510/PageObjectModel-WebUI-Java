@@ -31,11 +31,10 @@
             <scope>test</scope>
         </dependency>
         <dependency>
-    <groupId>ru.yandex.qatools.allure</groupId>
-    <artifactId>allure-testng-adaptor</artifactId>
-    <version>1.5.4</version>
-</dependency>
-
+            <groupId>ru.yandex.qatools.allure</groupId>
+            <artifactId>allure-testng-adaptor</artifactId>
+            <version>1.5.4</version>
+        </dependency>
     </dependencies>
     <build>
         <plugins>
