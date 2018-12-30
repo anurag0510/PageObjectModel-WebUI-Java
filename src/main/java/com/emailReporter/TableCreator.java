@@ -1,4 +1,4 @@
-package reporter;
+package com.emailReporter;
 
 import java.util.List;
 
