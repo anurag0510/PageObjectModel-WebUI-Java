@@ -1,4 +1,6 @@
-package com.base;
+package base;
+
+import static org.testng.Assert.assertEquals;
 
 import java.io.File;
 import java.lang.reflect.Method;
@@ -11,6 +13,7 @@ import org.openqa.selenium.support.events.EventFiringWebDriver;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
+import org.testng.annotations.Test;
 
 import com.listeners.WebEventListener;
 import com.listeners.TestListener;
@@ -88,6 +91,11 @@ public class TestBase {
         	System.setProperty("webdriver.chrome.driver", config.getDriverPath());	
 			driver = new ChromeDriver();
         }
+	}
+	
+	@Test
+	public void demoOne() {
+		assertEquals(true, true);
 	}
 
 }

@@ -6,7 +6,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-import com.base.TestBase;
+import base.TestBase;
 
 public class WebEventListener extends TestBase implements WebDriverEventListener {
 

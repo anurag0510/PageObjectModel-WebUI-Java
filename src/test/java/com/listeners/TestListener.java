@@ -7,9 +7,9 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.*;
 
-import com.base.TestBase;
 import com.emailReporter.ReportCreator;
 
+import base.TestBase;
 import ru.yandex.qatools.allure.annotations.Attachment;
 
 import java.io.IOException;
