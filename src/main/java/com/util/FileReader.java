@@ -1,10 +1,18 @@
 package com.util;
 
+import java.io.File;
+import java.io.FileInputStream;
+import java.io.FileNotFoundException;
 import java.io.InputStream;
 
 public class FileReader {
     public static InputStream read(String filePath) {
-        ClassLoader classLoader = FileReader.class.getClassLoader();
-        return classLoader.getResourceAsStream(filePath);
+    	InputStream input = null;
+		try {
+			input = new FileInputStream(new File(filePath));
+		} catch (FileNotFoundException e) {
+			e.printStackTrace();
+		}
+		return input;
     }
 }
