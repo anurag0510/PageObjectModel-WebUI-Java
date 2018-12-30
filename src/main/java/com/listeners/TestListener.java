@@ -7,7 +7,7 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.*;
 
-import com.base.BaseTest;
+import com.base.TestBase;
 import com.emailReporter.ReportCreator;
 
 import ru.yandex.qatools.allure.annotations.Attachment;
@@ -122,7 +122,7 @@ public class TestListener implements IExecutionListener, ITestListener, ISuiteLi
     
     @Attachment(value = "Page screenshot", type = "image/png")
     public byte[] takeScreenShot(String methodName) {
-        driver = BaseTest.driver;
+        driver = TestBase.driver;
         return ((TakesScreenshot) driver).getScreenshotAs(OutputType.BYTES);
     }
     

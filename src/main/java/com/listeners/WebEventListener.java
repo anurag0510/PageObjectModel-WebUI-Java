@@ -6,9 +6,9 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.events.WebDriverEventListener;
 
-import com.base.BaseTest;
+import com.base.TestBase;
 
-public class WebEventListener extends BaseTest implements WebDriverEventListener {
+public class WebEventListener extends TestBase implements WebDriverEventListener {
 
 	@Override
 	public void beforeAlertAccept(WebDriver driver) {

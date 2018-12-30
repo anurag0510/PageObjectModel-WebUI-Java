@@ -2,7 +2,7 @@ package com.base;
 
 import org.openqa.selenium.WebDriver;
 
-public class BaseTest {
+public class TestBase {
 	
 	public static WebDriver driver;
 
