@@ -1,4 +1,4 @@
-package com.emailReporter;
+package emailReporter;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;

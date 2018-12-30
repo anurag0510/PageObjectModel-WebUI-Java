@@ -1,4 +1,4 @@
-package com.listeners;
+package listeners;
 
 import java.util.List;
 
@@ -7,9 +7,8 @@ import org.openqa.selenium.TakesScreenshot;
 import org.openqa.selenium.WebDriver;
 import org.testng.*;
 
-import com.emailReporter.ReportCreator;
-
 import base.TestBase;
+import emailReporter.ReportCreator;
 import ru.yandex.qatools.allure.annotations.Attachment;
 
 import java.io.IOException;

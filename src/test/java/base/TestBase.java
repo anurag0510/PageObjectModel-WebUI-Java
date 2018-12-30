@@ -15,10 +15,10 @@ import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Listeners;
 import org.testng.annotations.Test;
 
-import com.listeners.WebEventListener;
-import com.listeners.TestListener;
-import com.models.Config;
-import com.util.YamlReader;
+import listeners.TestListener;
+import listeners.WebEventListener;
+import models.Config;
+import util.YamlReader;
 
 @Listeners({TestListener.class})
 public class TestBase {
