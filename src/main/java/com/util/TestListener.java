@@ -12,6 +12,7 @@ import com.emailReporter.ReportCreator;
 
 import ru.yandex.qatools.allure.annotations.Attachment;
 
+import java.io.IOException;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.util.ArrayList;
@@ -108,10 +109,15 @@ public class TestListener implements IExecutionListener, ITestListener, ISuiteLi
         ReportCreator rc = new ReportCreator(totalBuildTime, suiteDetails, projectDetails, suiteFailureDetails);
         String reportSummary = rc.generateSummary();
         String passPercent = Integer.toString(rc.emailSubject());
-        String completeReport = rc.generateCompleteReport(reportSummary);
-		rc.publishReport(completeReport, "target/summary.html");
-		String emailSubject = rc.generateMailSubject(passPercent);
-		rc.publishReport(emailSubject, "target/mailSubject.txt");
+        String completeReport;
+		try {
+			completeReport = rc.generateCompleteReport(reportSummary);
+			rc.publishReport(completeReport, "target/summary.html");
+			String emailSubject = rc.generateMailSubject(passPercent);
+			rc.publishReport(emailSubject, "target/mailSubject.txt");
+		} catch (IOException e) {
+			e.printStackTrace();
+		}
     }
     
     @Attachment(value = "Page screenshot", type = "image/png")
