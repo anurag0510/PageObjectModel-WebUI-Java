@@ -1,8 +1,10 @@
 package com.util;
 
 import org.yaml.snakeyaml.Yaml;
+import org.yaml.snakeyaml.constructor.Constructor;
 
 import com.models.Config;
+
 
 public class YamlReader {
     private String filePath;
@@ -12,6 +14,8 @@ public class YamlReader {
     }
 
     public Config readConfig() {
-        return new Yaml().loadAs(FileReader.read(filePath), Config.class);
+    	Constructor constructor = new Constructor(Config.class);
+		Yaml yaml = new Yaml( constructor );
+        return yaml.loadAs(FileReader.read(filePath), Config.class);
     }
 }

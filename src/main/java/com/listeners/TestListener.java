@@ -70,6 +70,8 @@ public class TestListener implements IExecutionListener, ITestListener, ISuiteLi
     
     @Override
     public void onTestSkipped(ITestResult result) {
+    	this.driver = TestBase.driver;
+    	driver.quit();
         addToTotalTestsInSuite();
         addToSkippedTestsInSuite();
         addToSkippedTestsInProject();
