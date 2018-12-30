@@ -1,17 +1,18 @@
 package com.util;
 
 import org.openqa.selenium.By;
-import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 
-public class GenericExplicitWait {
+import com.base.TestBase;
+
+public class GenericExplicitWait extends TestBase {
 	
 	protected WebDriverWait waitElement;
 	
-	public GenericExplicitWait(WebDriver driver) {
-		waitElement = new WebDriverWait(driver, 10);
+	public GenericExplicitWait() {
+		waitElement = new WebDriverWait(driver, config.getExplicitTimeOut());
 	}
 	
 	public void visibilityWait(WebElement element) {
