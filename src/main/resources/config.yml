@@ -1,0 +1,8 @@
+browser: chrome
+maximize: true
+timeout: 100
+timeoutInSeconds: 5
+timeoutForWait: 20
+explicitTimeOut: 1000
+users:
+  <myUser/Email>: <userPassword>
