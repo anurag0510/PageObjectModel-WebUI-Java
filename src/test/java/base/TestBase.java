@@ -92,10 +92,5 @@ public class TestBase {
 			driver = new ChromeDriver();
         }
 	}
-	
-	@Test
-	public void demoOne() {
-		assertEquals(true, true);
-	}
 
 }
