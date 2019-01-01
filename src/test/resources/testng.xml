@@ -1,10 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE suite SYSTEM "testng.org/testng-1.0.dtd">
-
-<suite verbose="0" name="Folder Functionality Check">
-    <test verbose="2" name="Default test" preserve-order="false">
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Folder Functionality Tests" parallel="false" preserve-order="true">
+    <test name="Folder Tests" preserve-order="true">
         <classes>
-            <class name="tests.FolderBasedTest" />
+            <class name="tests.FolderBasedTest"/>
         </classes>
     </test>
 </suite>
