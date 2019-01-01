@@ -1,9 +1,9 @@
-package com.util;
+package util;
 
 import org.yaml.snakeyaml.Yaml;
 import org.yaml.snakeyaml.constructor.Constructor;
 
-import com.models.Config;
+import models.Config;
 
 
 public class YamlReader {

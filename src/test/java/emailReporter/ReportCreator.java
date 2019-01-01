@@ -1,4 +1,4 @@
-package com.emailReporter;
+package emailReporter;
 
 import java.io.FileNotFoundException;
 import java.io.IOException;
@@ -33,7 +33,7 @@ public class ReportCreator {
     }
 
     public String generateCompleteReport(String reportSummary) throws IOException {
-        Scanner scanner = new Scanner(Paths.get("src/main/resources/build-summary.txt"), StandardCharsets.UTF_8.name());
+        Scanner scanner = new Scanner(Paths.get("src/test/resources/build-summary.txt"), StandardCharsets.UTF_8.name());
         String summarry = scanner.useDelimiter("\\A").next();
         scanner.close();
         String buildURL = System.getenv().containsKey("BUILD_URL") ? System.getenv("BUILD_URL") : "LOCAL_BUILD";
@@ -44,7 +44,7 @@ public class ReportCreator {
     }
 
     public String generateMailSubject(String subject) throws IOException {
-        Scanner scanner = new Scanner(Paths.get("src/main/resources/mail-subject.txt"), StandardCharsets.UTF_8.name());
+        Scanner scanner = new Scanner(Paths.get("src/test/resources/mail-subject.txt"), StandardCharsets.UTF_8.name());
         String summary = scanner.useDelimiter("\\A").next();
         scanner.close();
         summary = summary.replace("{{SUBJECT}}",subject);
