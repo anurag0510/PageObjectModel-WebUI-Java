@@ -63,6 +63,9 @@
                     <argLine>
                         -javaagent:"${settings.localRepository}/org/aspectj/aspectjweaver/${aspectj.version}/aspectjweaver-${aspectj.version}.jar"
                     </argLine>
+                    <suiteXmlFile>
+                    	src/test/resources/testing.xml
+                    </suiteXmlFile>
                 </configuration>
                 <dependencies>
                     <dependency>
