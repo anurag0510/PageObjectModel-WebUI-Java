@@ -27,9 +27,9 @@ public class FolderBasedTest extends TestBase {
 	public void testSetUp() {
 		homePage = PageFactory.initElements(driver, HomePage.class);
 		loginPage = homePage.clickLogin();
-		loginPage.enterUsername("");
+		loginPage.enterUsername(System.getProperty("userEmail"));
 		loginPage.nextOrSubmit();
-		loginPage.enterPassword("");
+		loginPage.enterPassword(System.getProperty("userPassword"));
 		userDashBoardPage = loginPage.nextOrSubmit();
 	}
 	
