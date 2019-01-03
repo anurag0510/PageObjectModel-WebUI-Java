@@ -66,6 +66,10 @@
                     <suiteXmlFile>
                     	src/test/resources/testing.xml
                     </suiteXmlFile>
+                    <systemPropertyVariables>
+                		<userEmail>${email}</userEmail>
+                		<userPassword>${password}</userPassword>
+                	</systemPropertyVariables>
                 </configuration>
                 <dependencies>
                     <dependency>
