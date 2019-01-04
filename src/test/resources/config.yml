@@ -1,6 +1,6 @@
 browser: "chrome"
 deleteCookies: true
-driverPath: "/Users//Users/thinkify/poynt_automation/appium/mobile-tests-automation/src/main/resources/locators/web/chromedriver"
+driverPath: "/Users/thinkify/poynt_automation/appium/mobile-tests-automation/src/main/resources/locators/web/chromedriver"
 explicitTimeOut: 30
 implicitTimeOut: 10
 maximize: true
